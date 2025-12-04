@@ -1,0 +1,108 @@
+.hero-minimal {
+    width: 100%;
+    padding: 120px 60px;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1.1s ease forwards;
+}
+
+.hero-content {
+    text-align: center;
+    width: 650px;
+    opacity: 0;
+    animation: slideUp 1.1s ease forwards 0.2s;
+}
+
+.hero-minimal h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #7b2cbf;
+}
+
+.hero-minimal .highlight {
+    color: #8b5cf6;
+}
+
+.hero-minimal .tagline {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.contact-info-btn {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.contact-info-btn a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 28px;
+    border-radius: 14px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #B0C4DE;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: all 0.3s ease-in-out;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-info-btn a i {
+    font-size: 20px;
+    color: rgb(175, 190, 255);
+}
+
+.contact-info-btn a:hover {
+    background: rgba(175, 190, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(175, 190, 255, 0.4);
+}
+
+.marquee {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-block;
+  animation: marqueeMove 18s linear infinite;
+}
+
+.marquee-inner span {
+  font-size: 14vw;
+  font-weight: 700;
+  color: #8b5cf6;
+  opacity: 0.18;
+  padding: 0 2rem;
+}
+
+@keyframes marqueeMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
