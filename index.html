@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <link rel="stylesheet" href="CSS/loading.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Personal Portfolio Website</title>
+
+</head>
+
+<body>
+
+  <!--Loading Animation Screen-->
+  <div id="loading-screen">
+    <div class="wrapper">
+      <!--Tea Bag Animation-->
+      <div class="teabag">
+        <div class="teabag-top"></div>
+        <div class="teabag-body">
+          <div class="teabag-content">
+            <div class="teabag-eyes eyes">
+              <div class="teabag-eye eye"></div>
+              <div class="teabag-eye eye"></div>
+            </div>
+            <div class="teabag-mouth"></div>
+          </div>
+        </div>
+
+        <!--Small particles around the teabag-->
+        <div class="teabag-pores">
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+          <span class="teabag-pore"></span>
+        </div>
+      </div>
+
+      <!-- Cup Animation-->
+      <div class="cup">
+        <div class="cup-body">
+          <div class="cup-eyes eyes">
+            <div class="cup-eye eye"></div>
+            <div class="cup-eye eye"></div>
+          </div>
+          <!--Tongue-->
+          <div class="cup-mouth">
+            <div class="cup-tongue"></div>
+          </div>
+        </div>
+
+        <!-- Handle and Saucer-->
+        <div class="cup-handle"></div>
+        <div class="cup-saucer">
+          <div class="cup-saucer-top"></div>
+          <div class="cup-saucer-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left SideBar Buttons-->
+  <div id="main">
+
+    <!-- Left SideBar Buttons -->
+    <div id="click-section">
+      <div id="drawerboxes">
+        <!--Button 1-->
+        <div class="drawerbox active">
+          <button class="drawer-btn active" onclick="slideTo(1)">Home<span class="drawer-head">1</span></button>
+        </div>
+        <!--Button 2-->
+        <div class="drawerbox">
+          <button class="drawer-btn" onclick="slideTo(2)">About Me<span class="drawer-head">2</span></button>
+        </div>
+        <!--Button 3-->
+        <div class="drawerbox">
+          <button class="drawer-btn" onclick="slideTo(3)">Project<span class="drawer-head">3</span></button>
+        </div>
+        <!--Button 4-->
+        <div class="drawerbox">
+          <button class="drawer-btn" onclick="slideTo(4)">Contact Me<span class="drawer-head">4</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!--Slide section-->
+    <div id="slide-section">
+
+      <!-- Progress bar under buttons enable the card to move when user tap the selected button-->
+      <div id="slide-bar">
+        <div id="bar"></div>
+      </div>
+
+      <div id="card-section">
+
+        <!-- SLIDE 1 — Home Page -->
+        <div id="card1" class="card">
+          <iframe src="home.html" class="iframe" scrolling="no"></iframe>
+        </div>
+
+        <!-- SLIDE 2 — About Me Page -->
+        <div id="card2" class="card">
+          <iframe src="aboutme.html" class="iframe" scrolling="no"></iframe>
+        </div>
+
+        <!-- SLIDE 3 — Project Page -->
+        <div id="card3" class="card">
+          <iframe src="project.html" class="iframe" scrolling="no"></iframe>
+        </div>
+
+        <!-- SLIDE 4 — Contact Me Page -->
+        <div id="card4" class="card">
+          <iframe src="contact.html" class="iframe" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="Javascript/script.js"></script>
+
+</body>
+</html>
+
