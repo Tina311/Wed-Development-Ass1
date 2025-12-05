@@ -1,0 +1,169 @@
+/* ====== MAIN CONTAINER ====== */
+.aboutA {
+    display: flex;     /* Make children align in a row */
+    justify-content: center;  /* Center card horizontally */
+    align-items: flex-start;  /* Align to top, not center */
+    min-height: 100vh;  /* Full screen height */
+    padding: 20px; /* Space around content */
+    box-sizing: border-box;   /* Include padding in width */
+}
+
+/* ===== CARD CONTAINER ===== */
+.aboutA-card {
+    display: flex;  /* Create left/right columns */
+    gap: 40px;    /* Space between columns */
+    width: 100%;          
+    max-width: 800px;  /* Prevent card from getting too wide */
+    border-radius: 24px;   /* Rounded edges */
+    padding: 45px 50px;   /* Inner spacing */
+    box-shadow: 0 10px 35px rgba(180, 120, 255, 0.25);
+    backdrop-filter: blur(6px);  /* Frosted glass effect */
+}
+
+/* Make the left section slightly wider */
+.aboutA-left {
+    flex: 1.3;
+}
+
+/* ===== Headings & Text ===== */
+.aboutA h1 {
+    font-size: 32px;
+    color: #7b2cbf;
+}
+
+.aboutA span {
+    color: #a855f7;  /* Highlight color */
+    font-weight: 700;
+}
+
+.aboutA-bio,
+.aboutA-goal {
+    margin: 14px 0 22px;
+    line-height: 1.6;     /* Improve readability */
+    font-size: 15.5px;
+    color: #4b4453;
+}
+
+/* Section titles: e.g. "My Goal", "Interests" */
+.section-title {
+    margin-top: 22px;
+    margin-bottom: 10px;
+    color: #8b5cf6;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ===== Interest Tags Container ===== */
+.aboutA-tags {
+    display: flex;
+    flex-wrap: wrap;   /* Allow tags to wrap */
+    gap: 10px;
+}
+
+/* Individual tags / badges */
+.aboutA-tags span {
+   display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 28px;
+    border-radius: 14px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #5b21b6;
+    text-decoration: none;
+
+     /* Glassy effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Animation */
+    transition: all 0.3s ease-in-out;
+
+    /* Elevation shadow */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Collapse columns to stack vertically on mid-screens */
+@media (max-width: 850px) {
+    .aboutA-card {
+        flex-direction: column;
+    }
+}
+
+/* Shared stacking behavior for tablets and mobile */
+@media (max-width: 1024px) {
+    .aboutA-card {
+        flex-direction: column;
+    }
+}
+
+/* ==========================
+            MOBILE
+   ========================== */
+@media (max-width: 600px) {
+
+  .aboutA {
+      padding: 15px;
+      gap: 10px;
+  }
+
+  .aboutA-card {
+      padding: 20px;         /* smaller padding */
+      gap: 20px;             /* smaller gap */
+      width: 100%;           /* full width */
+  }
+
+  .aboutA h1 {
+      font-size: 28px; /* Smaller heading */
+      text-align: center;
+  }
+
+  .section-title {
+      font-size: 18px;
+      text-align: center;
+  }
+
+   /* Center text on small screens */
+  .aboutA-bio,
+  .aboutA-goal {
+      font-size: 15px;
+      text-align: center;
+      line-height: 1.4;
+      padding: 0 10px;
+  }
+
+   /* Center tags on mobile */
+  .aboutA-tags {
+      justify-content: center;
+      gap: 8px;
+  }
+
+   /* Smaller tag size */
+  .aboutA-tags span {
+      font-size: 14px;
+      padding: 6px 10px;
+  }
+}
+
+/* ==========================
+            TABLET
+   ========================== */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    /* Slightly larger text for tablets */
+  .aboutA h1 {
+      font-size: 34px;
+  }
+
+  .section-title {
+      font-size: 20px;
+  }
+
+  .aboutA-tags span {
+      font-size: 15px;
+      padding: 6px 12px;
+  }
+}
